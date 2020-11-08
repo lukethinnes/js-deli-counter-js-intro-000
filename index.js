@@ -14,19 +14,14 @@ function nowServing(katzDeliLine) {
 }
 
 function currentLine(katzDeliLine) {
-  var line = "";
-  for(let i = 0; i < katzDeliLine.length; i++) {
-    if(i < katzDeliLine.length - 1){
-      line == (` `+[i+1]+`. ` + katzDeliLine[i] + `,`);
+    if(katzDeliLine.length === 0) {
+        return "There is nobody currently in line!"
     }
     else {
-      line == (` `+[i+1]+`. ` + katzDeliLine[i]);
+        var arrayWithIndexAndName = []
+        for (let i = 0; i < katzDeliLine.length; i++) {
+            arrayWithIndexAndName.push(`${i + 1}. ${katzDeliLine[i]}`)
+            }
+        return `The line is currently: ${arrayWithIndexAndName}`
     }
-  }
-  if (katzDeliLine.length === 0) {
-    return "The line is currently empty.";
-  }
-  else {
-    return (`The line is currently:` + line);
-  }
 }
