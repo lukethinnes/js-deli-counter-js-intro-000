@@ -20,7 +20,7 @@ function currentLine(katzDeliLine) {
     else {
         var arrayWithIndexAndName = []
         for (let i = 0; i < katzDeliLine.length; i++) {
-            arrayWithIndexAndName.push(`${i + 1}. ${katzDeliLine[i]}`)
+            arrayWithIndexAndName.push(` ${i + 1}. ${katzDeliLine[i]}`)
             }
         return `The line is currently: ${arrayWithIndexAndName}`
     }
